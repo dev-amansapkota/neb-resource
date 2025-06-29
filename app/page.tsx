@@ -155,7 +155,7 @@ export default function Home() {
     </div>
   </div>
 </div>
-<div className="text-center py-6 bg-black">
+<div className="text-center py-6 bg-blue-700">
         <h2 className="text-2xl font-semibold text-white">
           Subscribe for More Updates!
         </h2>
