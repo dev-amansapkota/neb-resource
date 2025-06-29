@@ -17,11 +17,11 @@ export default function Home() {
     { id: "eighth-semester", name: "Eighth Semester", subjects: 1 },
   ];
 
-  const [activeSemester, setActiveSemester] = useState(null);
+  const [activeSemester, setActiveSemester] = useState<number | null>(null);
 
-  const toggleSemester = (index) => {
-    setActiveSemester(activeSemester === index ? null : index);
-  };
+  const toggleSemester = (index: number) => {
+  setActiveSemester(activeSemester === index ? null : index);
+};
 
   return (
     <div className="min-h-screen bg-gray-50 p-4 sm:p-8 font-sans">
