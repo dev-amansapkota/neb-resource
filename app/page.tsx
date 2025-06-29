@@ -4,6 +4,7 @@ import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { IoLibraryOutline } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
+import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
 export default function Home() {
   const semesters = [
@@ -17,6 +18,14 @@ export default function Home() {
     { id: "eighth-semester", name: "Eighth Semester", subjects: 1 },
   ];
 
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+  
+    console.log("Subscribed with:", email);
+    setEmail("");
+  };
   const [activeSemester, setActiveSemester] = useState<number | null>(null);
 
   const toggleSemester = (index: number) => {
@@ -146,71 +155,112 @@ export default function Home() {
     </div>
   </div>
 </div>
-<div  className="w-full bg-gradient-to-b bg-blue-800 to-blue-300 rounded-2xl ">
-  <div className="text-center font-semibold text-white !py-4">
-      <h2 className="text-2xl ">Subscribe for more update!</h2>
-  </div>
- <div className="text-center flex justify-center my-3">
-   
- 
-  <div className="flex">
-     <input type="text"height={25} placeholder="Enter Your email"  className="rounded focus:outline-none text-white border-blue-700"></input>
-  <div className="  bg-red-700 w-30 h-12 shadow-2xl  shadow-white rounded-2xl justify-center text-center flex">
-   <button className="text-white">Subscribe</button>
-  </div>
-  </div>
- </div>
- <div className="flex gap-12">
-  <div className="mx-4">
-    <Image src="/logo1.jpg" alt={""} width={50} height={40} className="rounded"></Image>
-    <h2 className="text-white">Your Trusted Partner for Entrance Exam<br></br>Success - NEB Resource </h2>
-   <div className="flex my-3">
-{/* <FaFacebookF className="hover:text-blue-600 scale-110 transform  duration-100 text-2xl"/> */}
-<img   width={40}
-src="https://static.vecteezy.com/system/resources/previews/018/930/413/large_2x/instagram-logo-instagram-icon-transparent-free-png.png"></img>
-<img   width={39}
-className="mx-2"
-src="https://png.pngtree.com/png-clipart/20230401/original/pngtree-facebook-icon-png-image_9015416.png"></img>
-<img   width={39}
-className="mx-2"
-src="https://www.kocliko.co/wp-content/uploads/2021/12/youtube-480x480.png"></img>
-<img   width={39}
-className="mx-2"
-src="https://tse3.mm.bing.net/th/id/OIP.6uTQ7mOjYOD2sNKxUdnaNAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"></img>
-   </div>
-   
-
-  </div>
-  <div className="flex ">
-    <div className="mx-30 text-white">
-      <h2 className="font-bold mb-1 ">Resources</h2>
-    
-      <h2 className="mb-1">Courses</h2>
-      <h2 className="mb-1">Notes</h2>
-      <h2 className="mb-1">Mock Test</h2>
-    </div>
-     <div className="mx-30 text-white mb-1">
-      <h2 className="font-bold  mb-1">Courses</h2>
-       <h2 className="mb-1">BSc.CSIT</h2>
-      <h2 className="mb-1">IOE</h2>
-      <h2 className="mb-1">CEE</h2>
-
-      
-    </div>
-     <div className="mx-12 text-white mb-1">
-     
-    </div>
-    
-  </div>
- </div>
-  
-  <div className="text-center mb-3.5 font-bold">
-<h2 className="font-bold text-pink-500"> Copyright(©) 2026 All Right Reserve</h2>
-</div>
-</div>
-
+<div className="text-center py-6 bg-black">
+        <h2 className="text-2xl font-semibold text-white">
+          Subscribe for More Updates!
+        </h2>
+        <form onSubmit={handleSubscribe} className="flex justify-center mt-4">
+          <div className="flex items-center max-w-md w-full">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter Your Email"
+              className="flex-grow px-4 py-2 rounded-l-lg bg-white/20 text-white placeholder-white/70 focus:outline-none border-none"
+              required
+            />
+            <button
+              type="submit"
+              className="bg-red-600 text-white px-6 py-2 rounded-r-lg hover:bg-red-700 transition-all duration-300"
+            >
+              Subscribe
+            </button>
+          </div>
+        </form>
       </div>
 
+      {/* Footer Content */}
+      <div className="flex flex-col md:flex-row justify-between px-6 py-8 gap-8 bg-gradient-to-l bg-blue-700 to-blue-950">
+        {/* Brand Section */}
+        <div className="md:w-1/3">
+          <Image
+            src="/logo1.jpg"
+            alt="NEB Resource Logo"
+            width={50}
+            height={40}
+            className="rounded mb-4"
+          />
+          <p className="text-white text-lg">
+            Your Trusted Partner for Entrance Exam Success - NEB Resource
+          </p>
+          <div className="flex space-x-4 mt-4">
+            <Link href="https://instagram.com" target="_blank">
+              <FaInstagram className="text-white text-2xl hover:text-amber-300 transition-transform duration-300 hover:scale-110" />
+            </Link>
+            <Link href="https://facebook.com" target="_blank">
+              <FaFacebookF className="text-white text-2xl hover:text-amber-300 transition-transform duration-300 hover:scale-110" />
+            </Link>
+            <Link href="https://youtube.com" target="_blank">
+              <FaYoutube className="text-white text-2xl hover:text-amber-300 transition-transform duration-300 hover:scale-110" />
+            </Link>
+            <Link href="https://twitter.com" target="_blank">
+              <FaTwitter className="text-white text-2xl hover:text-amber-300 transition-transform duration-300 hover:scale-110" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Resources Section */}
+        <div className="md:w-1/6">
+          <h3 className="text-lg font-bold text-white mb-3">Resources</h3>
+          <ul className="text-white space-y-2">
+            <li>
+              <Link href="/courses" className="hover:text-amber-300 transition-colors duration-300">
+                Courses
+              </Link>
+            </li>
+            <li>
+              <Link href="/notes" className="hover:text-amber-300 transition-colors duration-300">
+                Notes
+              </Link>
+            </li>
+            <li>
+              <Link href="/live-mock-tests" className="hover:text-amber-300 transition-colors duration-300">
+                Mock Test
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Courses Section */}
+        <div className="md:w-1/6">
+          <h3 className="text-lg font-bold text-white mb-3">Courses</h3>
+          <ul className="text-white space-y-2">
+            <li>
+              <Link href="/courses/bsc-csit" className="hover:text-amber-300 transition-colors duration-300">
+                BSc.CSIT
+              </Link>
+            </li>
+            <li>
+              <Link href="/courses/ioe" className="hover:text-amber-300 transition-colors duration-300">
+                IOE
+              </Link>
+            </li>
+            <li>
+              <Link href="/courses/cee" className="hover:text-amber-300 transition-colors duration-300">
+                CEE
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="text-center py-4">
+        <p className="text-black font-semibold">
+          Copyright © {new Date().getFullYear()} All Rights Reserved
+        </p>
+      </div>
+    </div>
     </div>
   );
 }
