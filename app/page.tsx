@@ -97,7 +97,7 @@ export default function Home() {
             <Link
               href={`/semesters/${semester.id}`}
               key={index}
-              className="block bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="block bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-amber-700"
             >
               <div className="flex justify-between items-center">
                 <div>
@@ -179,9 +179,7 @@ export default function Home() {
         </form>
       </div>
 
-      {/* Footer Content */}
       <div className="flex flex-col md:flex-row justify-between px-6 py-8 gap-8 bg-gradient-to-l bg-blue-700 to-blue-950">
-        {/* Brand Section */}
         <div className="md:w-1/3">
           <Image
             src="/logo1.jpg"
@@ -209,7 +207,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Resources Section */}
         <div className="md:w-1/6">
           <h3 className="text-lg font-bold text-white mb-3">Resources</h3>
           <ul className="text-white space-y-2">
@@ -230,8 +227,6 @@ export default function Home() {
             </li>
           </ul>
         </div>
-
-        {/* Courses Section */}
         <div className="md:w-1/6">
           <h3 className="text-lg font-bold text-white mb-3">Courses</h3>
           <ul className="text-white space-y-2">
@@ -254,7 +249,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Copyright */}
+  
       <div className="text-center py-4">
         <p className="text-black font-semibold">
           Copyright © {new Date().getFullYear()} All Rights Reserved
