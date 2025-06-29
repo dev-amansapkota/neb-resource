@@ -122,6 +122,7 @@ export default function Home() {
       <div>
         <div className="text-center my-8  ">
         <h1 className="font-bold text-3xl">Why NEB <span className="text-red-800">Resource</span> ?</h1>
+        <br></br>
               <p className="text-gray-600 text-xl">Bringing together the best free educational content to across the web,<br></br> we make exam preparation faster, easier, and more focused for students</p>
       </div>
 <div className="flex">
@@ -145,6 +146,69 @@ export default function Home() {
     </div>
   </div>
 </div>
+<div  className="w-full bg-gradient-to-b bg-blue-800 to-blue-300 rounded-2xl ">
+  <div className="text-center font-semibold text-white !py-4">
+      <h2 className="text-2xl ">Subscribe for more update!</h2>
+  </div>
+ <div className="text-center flex justify-center my-3">
+   
+ 
+  <div className="flex">
+     <input type="text"height={25} placeholder="Enter Your email"  className="rounded focus:outline-none text-white border-blue-700"></input>
+  <div className="  bg-red-700 w-30 h-12 shadow-2xl  shadow-white rounded-2xl justify-center text-center flex">
+   <button className="text-white">Subscribe</button>
+  </div>
+  </div>
+ </div>
+ <div className="flex gap-12">
+  <div className="mx-4">
+    <Image src="/logo1.jpg" alt={""} width={50} height={40} className="rounded"></Image>
+    <h2 className="text-white">Your Trusted Partner for Entrance Exam<br></br>Success - NEB Resource </h2>
+   <div className="flex my-3">
+{/* <FaFacebookF className="hover:text-blue-600 scale-110 transform  duration-100 text-2xl"/> */}
+<img   width={40}
+src="https://static.vecteezy.com/system/resources/previews/018/930/413/large_2x/instagram-logo-instagram-icon-transparent-free-png.png"></img>
+<img   width={39}
+className="mx-2"
+src="https://png.pngtree.com/png-clipart/20230401/original/pngtree-facebook-icon-png-image_9015416.png"></img>
+<img   width={39}
+className="mx-2"
+src="https://www.kocliko.co/wp-content/uploads/2021/12/youtube-480x480.png"></img>
+<img   width={39}
+className="mx-2"
+src="https://tse3.mm.bing.net/th/id/OIP.6uTQ7mOjYOD2sNKxUdnaNAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"></img>
+   </div>
+   
+
+  </div>
+  <div className="flex ">
+    <div className="mx-30 text-white">
+      <h2 className="font-bold mb-1 ">Resources</h2>
+    
+      <h2 className="mb-1">Courses</h2>
+      <h2 className="mb-1">Notes</h2>
+      <h2 className="mb-1">Mock Test</h2>
+    </div>
+     <div className="mx-30 text-white mb-1">
+      <h2 className="font-bold  mb-1">Courses</h2>
+       <h2 className="mb-1">BSc.CSIT</h2>
+      <h2 className="mb-1">IOE</h2>
+      <h2 className="mb-1">CEE</h2>
+
+      
+    </div>
+     <div className="mx-12 text-white mb-1">
+     
+    </div>
+    
+  </div>
+ </div>
+  
+  <div className="text-center mb-3.5 font-bold">
+<h2 className="font-bold text-pink-500"> Copyright(©) 2026 All Right Reserve</h2>
+</div>
+</div>
+
       </div>
 
     </div>
